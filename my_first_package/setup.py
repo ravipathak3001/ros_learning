@@ -26,7 +26,9 @@ setup(
         'console_scripts': [
             'circle_driver = my_first_package.circle_driver:main',
             'pose_watcher = my_first_package.pose_watcher:main',
-            'wall_bouncer = my_first_package.wall_bouncer:main'
+            'wall_bouncer = my_first_package.wall_bouncer:main',
+            'rotate_client = my_first_package.rotate_client:main',
+            'smooth_rotator = my_first_package.smooth_rotator:main'
         ],
     },
 )

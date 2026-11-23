@@ -4,6 +4,8 @@ setup.py
 my_first_package/__init__.py
 my_first_package/circle_driver.py
 my_first_package/pose_watcher.py
+my_first_package/rotate_client.py
+my_first_package/smooth_rotator.py
 my_first_package/wall_bouncer.py
 my_first_package.egg-info/PKG-INFO
 my_first_package.egg-info/SOURCES.txt

@@ -84,7 +84,8 @@ class WallBouncer(Node):
                 (p.x < margin and dx < 0) or
                 (p.y > MAX_XY - margin and dy > 0) or
                 (p.y < margin and dy < 0))
-
+    
+    # --- helper function ---
     def set_pen(self, r,g,b):
         req = SetPen.Request()
         req.r, req.g, req.b = r,g,b
