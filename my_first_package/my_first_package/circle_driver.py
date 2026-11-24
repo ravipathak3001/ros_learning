@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
 class CircleDriver(Node):
     def __init__(self):
         super().__init__('circle_driver')   #node name
-        self.pub = self.create_publisher(Twist, '/turtle1/cmd_vel',10)
+        self.pub = self.create_publisher(Twist, 'turtle1/cmd_vel',10)
         self.timer = self.create_timer(0.1, self.tick) # call tick() every 0.1 sec (10Hz)
         self.get_logger().info('Circle driver started')
     

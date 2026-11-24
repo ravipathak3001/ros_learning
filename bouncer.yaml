@@ -1,7 +1,7 @@
 /wall_bouncer:
   ros__parameters:
-    drive_speed: 5.0
-    margin: 1.0
+    drive_speed: 3.0
+    margin: 1.5
     start_type_description_service: true
     turn_speed: 3.0
     use_sim_time: false

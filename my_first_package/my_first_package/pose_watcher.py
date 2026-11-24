@@ -5,7 +5,7 @@ from turtlesim.msg import Pose
 class PoseWatcher(Node):
     def __init__(self):
         super().__init__('pose_watcher')
-        self.sub = self.create_subscription(Pose, '/turtle1/pose', self.on_pose, 10)
+        self.sub = self.create_subscription(Pose, 'turtle1/pose', self.on_pose, 10)
 
     def on_pose(self, msg:Pose):
         # pose arrivert ~60 times/sec, so log at most once per sec

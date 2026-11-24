@@ -8,7 +8,7 @@ class RotateClient(Node):
     def __init__(self):
         super().__init__('rotate_client')
         self.declare_parameter('theta', 1.57)
-        self.declare_parameter('action_name', '/turtle1/rotate_absolute')
+        self.declare_parameter('action_name', 'turtle1/rotate_absolute')
         self.declare_parameter('timeout', 1.0)
         self.done = False
         self.goal_handle = None

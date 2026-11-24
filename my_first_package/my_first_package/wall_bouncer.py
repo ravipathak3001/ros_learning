@@ -33,16 +33,16 @@ class WallBouncer(Node):
         self.add_on_set_parameters_callback(self.on_params)
 
         # --- topics ---
-        self.pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-        self.sub = self.create_subscription(Pose, '/turtle1/pose', self.on_pose, 10)
+        self.pub = self.create_publisher(Twist, 'turtle1/cmd_vel', 10)
+        self.sub = self.create_subscription(Pose, 'turtle1/pose', self.on_pose, 10)
 
         # --- service server ---
         self.serv = self.create_service(SetBool, 'set_paused', self.on_set_paused)
         
 
         # --- service client start fro, the center ---
-        self.teleport_cli = self.create_client(TeleportAbsolute, '/turtle1/teleport_absoluite')
-        self.pen_cli = self.create_client(SetPen, '/turtle1/set_pen')
+        self.teleport_cli = self.create_client(TeleportAbsolute, 'turtle1/teleport_absolute')
+        self.pen_cli = self.create_client(SetPen, 'turtle1/set_pen')
 
         if self.teleport_cli.wait_for_service(timeout_sec=5.0):
             req = TeleportAbsolute.Request()
